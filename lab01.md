@@ -49,4 +49,10 @@ Write a small console application to read and write to the file system. What exc
 Log the exception using the trace features you usually use. What tracing features do you use.
 
 
+## Address Spaces
 
+1. Write a .NET Framework application, create a variable, and write the address of the variable to the console
+
+2. Write a .NET Core application, create a variable, and write the address of the variable to the console
+
+Run the application multiple times. What's different?
