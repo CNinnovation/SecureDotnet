@@ -56,3 +56,16 @@ Log the exception using the trace features you usually use. What tracing feature
 2. Write a .NET Core application, create a variable, and write the address of the variable to the console
 
 Run the application multiple times. What's different?
+
+
+Code sample to display the address:
+
+```csharp
+        unsafe private static void ShowAddress(string name, int[] item)
+        {
+            fixed (int* addr = item)
+            {
+                Console.Write($"\t0x{(ulong)addr:X}");
+            }
+        }
+```
