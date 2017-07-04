@@ -22,3 +22,6 @@ Ask Christian for username/password
 4. Read values from the configuration files
 5. Add and use user secrets
 
+## SQL Injection
+
+1. Use Entity Framework Core in the SQL Injection scenario to get rid of the SQL injection
