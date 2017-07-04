@@ -7,6 +7,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using MyWebAppSample.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
+using System.Text;
+using System.Text.Encodings.Web;
 
 namespace MyWebAppSample
 {
@@ -29,6 +34,11 @@ namespace MyWebAppSample
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddDbContext<NorthwindModel>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("NorthwindConnection"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +58,16 @@ namespace MyWebAppSample
             }
 
             app.UseStaticFiles();
+
+            app.Map("/echo", app1 =>
+            {
+                app1.Run(async context =>
+                {
+                    context.Response.Headers.Add("mykeya\r\nkeyb=val2", "value1");
+                    string data = context.Request.Query["x"];
+                    await context.Response.WriteAsync(HtmlEncoder.Default.Encode(data));
+                });
+            });
 
             app.UseMvc(routes =>
             {

@@ -5,11 +5,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 using System.Text;
+using MyWebAppSample.Models;
 
 namespace MyWebAppSample.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly NorthwindModel _northwindModel;
+        public HomeController(NorthwindModel northwindModel)
+        {
+            _northwindModel = northwindModel;
+        }
+        
         public IActionResult Index()
         {
             return View();
@@ -57,7 +64,29 @@ namespace MyWebAppSample.Controllers
             }
             // string sql = $"SELECT * FROM Customers WHERE City={id}";
             return View();
-
         }
+
+        public IActionResult SqlSample2(string id)
+        {
+            var q = from c in _northwindModel.Customers
+                    where c.City == id
+                    select c;
+
+            string[] data = q.Select(c => $"{c.CompanyName} {c.ContactName}").ToArray();
+
+            ViewBag.Data = string.Join(",", data);
+
+            return View("SqlSample");
+
+            //_northwindModel.Customers.Where(c => c.City == id)
+        }
+
+        public IActionResult Echo(string id)
+        {
+            ViewBag.Data = id;
+            return View();
+        }
+
+        public string Echo2(string id) => id;
     }
 }
