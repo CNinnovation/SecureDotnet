@@ -13,3 +13,6 @@
 3. Create configuration files
 4. Read values from the configuration files
 5. Add and use user secrets
+
+Northwind database:
+[download Northwind](https://www.microsoft.com/en-us/download/details.aspx?id=23654)
