@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<environment names="Development, Staging">
+
+</environment>
+
+<form asp-controller="Home" asp-action="EditBook"  method="post" action="/Home/EditBook">
+    @Html.AntiForgeryToken()
+
+
+    <label for="title">Titel:</label>
+    <input type="text" id="title" name="title" />
+    <br />
+    <label for="publisher">Publisher:</label>
+    <input type="text" id="publisher" name="publisher" />
+    <br />
+    <input type="submit" value="Submit" />
+</form>
+
+
+@using (Html.BeginForm())
+{
+
+}

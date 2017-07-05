@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26621.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XSRFDemo", "XSRFDemo\XSRFDemo.csproj", "{31EF80B7-258F-43F1-BFC4-74A13B85684F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackingSite", "HackingSite\HackingSite.csproj", "{E76E201E-6338-4E50-8009-E87F42EFA4C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31EF80B7-258F-43F1-BFC4-74A13B85684F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31EF80B7-258F-43F1-BFC4-74A13B85684F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31EF80B7-258F-43F1-BFC4-74A13B85684F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31EF80B7-258F-43F1-BFC4-74A13B85684F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E76E201E-6338-4E50-8009-E87F42EFA4C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E76E201E-6338-4E50-8009-E87F42EFA4C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E76E201E-6338-4E50-8009-E87F42EFA4C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E76E201E-6338-4E50-8009-E87F42EFA4C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FA9DC43-F58B-4C3C-8DAB-5B5910451B83}
+	EndGlobalSection
+EndGlobal
