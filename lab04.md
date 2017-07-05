@@ -1,6 +1,4 @@
-# Lab 4
-
-## XSRF
+# Lab 4 - XSRF
 
 ## ASP.NET Core Web Application
 
